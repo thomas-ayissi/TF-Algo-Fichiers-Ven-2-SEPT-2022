@@ -1,0 +1,28 @@
+Algorithme DemoIter
+
+    Variable qttOeuf : Entier
+
+DEBUT
+    
+    qttOeuf <- 6 
+
+    TANTQUE qttOeuf > 0 FAIRE
+        Ecrire("Je lance l'oeuf")
+        qttOeuf <- qttOeuf - 1
+    FINTQ
+
+FIN
+
+
+Algorithme puissanceDe2
+
+    Variable multiplication : Entier
+
+DEBUT
+    
+    POUR multiplication DE 2 À 20 [PAR 2] FAIRE
+        Ecrire(multiplication)
+    FINP
+
+    
+FIN

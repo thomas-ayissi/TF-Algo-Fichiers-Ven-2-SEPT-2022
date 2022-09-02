@@ -1,0 +1,36 @@
+Algorithme Insert
+
+    Variable tab: Tableau[10] de Entier
+    Variable tabFinal: Tableau[11] de Entier
+    Variable i,j: Entier
+
+    Variable aInserer: Entier
+    Variable insere: Booleen
+
+DEBUT
+
+    POUR i DE 0 À 9 FAIRE
+        Lire( tab[i] )
+    FINP
+    
+    Trier( tab ) // voir tri.js
+
+    i <- 0
+    insere <- false
+    TANTQUE i < 11 FAIRE
+
+        SI !insere &&  ( i == 10 || aInserer <= tab[i]) ALORS
+
+            tabFinal[i] <- aInserer
+            insere <- true
+
+        SINON
+
+            tabFinal[i] <- tab[ insere ? i-1 : i ]
+
+        FINSI
+
+    FINTQ
+
+
+FIN

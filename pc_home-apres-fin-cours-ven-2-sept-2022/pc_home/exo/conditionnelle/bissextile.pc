@@ -1,0 +1,14 @@
+Algorithme Bissextile
+    Variable annee : Entier
+DEBUT
+    
+    Lire(annee)
+
+    SI ((annee % 4 == 0) AND (annee % 100 != 0)) OR (annee % 400 == 0) ALORS
+        Ecrire("Bissextile")
+    SINON 
+        Ecrire("Pas bissextile")
+    FINSI
+
+FIN
+

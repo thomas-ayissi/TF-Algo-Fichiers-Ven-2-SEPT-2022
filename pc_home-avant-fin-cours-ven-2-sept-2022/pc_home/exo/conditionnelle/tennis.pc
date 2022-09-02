@@ -1,0 +1,25 @@
+Algorithme Tennis
+
+    Variable pret, vide : Booleen 
+
+DEBUT
+    
+    Lire(pret)
+    Lire(vide)
+
+    SI pret AND NOT vide ALORS
+        Ecrire("Je lance")
+
+    SINONSI NOT pret AND NOT vide  ALORS
+        Ecrire("Je ne lance pas - pas pret")
+
+    SINONSI pret AND vide ALORS
+        Ecrire("Je ne lance pas - vide")
+
+    SINON // NOT pret AND vide
+        Ecrire("Je ne lance pas - pas pret et vide")
+    FINSI
+    
+
+FIN
+

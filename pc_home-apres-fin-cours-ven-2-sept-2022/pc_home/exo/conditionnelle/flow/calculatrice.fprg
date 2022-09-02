@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="akimts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-25 11:02:23 "/>
+        <attribute name="created" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIwOTozNzo1NCAiOzI4NzY="/>
+        <attribute name="edited" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIxMTowMjoyMyAiOzI7Mjk2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="t1, t2" type="Integer" array="False" size=""/>
+            <declare name="ope" type="String" array="False" size=""/>
+            <input variable="t1"/>
+            <input variable="ope"/>
+            <input variable="t2"/>
+            <if expression="ope == &quot;+&quot;">
+                <then>
+                    <output expression="t1 + t2" newline="True"/>
+                </then>
+                <else>
+                    <if expression="ope == &quot;-&quot;">
+                        <then>
+                            <output expression="t1 - t2" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="ope == &quot;*&quot;">
+                                <then>
+                                    <output expression="t1 * t2" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="ope == &quot;/&quot;">
+                                        <then>
+                                            <if expression="t2 != 0">
+                                                <then>
+                                                    <output expression="t1 / t2" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;op&#233;ration impossible&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="ope == &quot;DIV&quot;">
+                                                <then>
+                                                    <declare name="rslt" type="Integer" array="False" size=""/>
+                                                    <if expression="t2 != 0">
+                                                        <then>
+                                                            <assign variable="rslt" expression="t1 / t2"/>
+                                                            <output expression="rslt" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;op&#233;ration impossible&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <if expression="ope == &quot;MOD&quot;">
+                                                        <then>
+                                                            <if expression="t2 &gt; 0 &amp;&amp; t1 &gt;= 0">
+                                                                <then>
+                                                                    <output expression="t1 mod t2" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;op&#233;ration impossible&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;op&#233;ration invalide&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

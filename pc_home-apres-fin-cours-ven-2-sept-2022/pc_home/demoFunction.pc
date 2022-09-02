@@ -1,0 +1,39 @@
+Algorithme FaireAddition
+    Variable a, b, rslt: Entier
+DEBUT
+
+    // 1 - recupérer la valeur
+    Lire(a);
+    Lire(b);
+    // 2 - calculer le resultat
+    rslt <- Addition(a, b);
+    // 3 - afficher le resultat
+    Ecrire(rslt)
+FIN
+
+FONCTION Addition(a: Entier, b: Entier) : Entier
+DEBUT
+   
+    RENVOIE (a + b); // doit être un entier
+
+FIN
+
+
+
+//////////////////
+
+Algorithme DemoRef
+    Variable nbr : Entier
+DEBUT
+
+    nbr <- 0;
+    inc(nbr);
+    Ecrire(nbr); // 1
+
+FIN
+
+
+PROCEDURE inc( ref a: Entier )
+DEBUT
+    a <- a + 1
+FIN

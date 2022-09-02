@@ -1,0 +1,4 @@
+Algorithme Patate
+DEBUT
+    
+FIN

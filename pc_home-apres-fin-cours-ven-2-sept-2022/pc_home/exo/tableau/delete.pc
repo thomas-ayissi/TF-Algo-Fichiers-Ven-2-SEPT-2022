@@ -1,0 +1,39 @@
+Algorithme Delete
+
+    Variable tab: Tableau[10] de Entier
+    Variable tabFinal: Tableau[9] de Entier
+
+    Variable valeur: Entier
+    Variable cpt: Entier
+
+    Variable trouve: Booleen
+
+DEBUT
+    
+    POUR cpt DE 0 À 9 FAIRE
+        tab[cpt] <- Lire(v)
+    FINP
+
+    trouve <- false
+
+    cpt <- 0
+    TANTQUE cpt < 10 FAIRE
+        
+        SI !trouve && tab[cpt] == valeur ALORS
+            trouve <- true
+        
+        SINON SI trouve || cpt < 9 // || tab[cpt] != valeur)
+            tabFinal[ trouve ? cpt-1 : cpt ] <- tab[cpt]
+        FINSI
+
+        cpt <- cpt + 1;
+    FINTQ
+
+    SI trouve ALORS
+        Ecrire(tabFinal)
+    SINON
+        Ecrire(tab)
+    FINSI
+    
+
+FIN

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="akimts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-25 11:07:30 "/>
+        <attribute name="created" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIxMDoxNzo1NCAiOzI4NjY="/>
+        <attribute name="edited" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIxMTowNzozMCAiOzI7Mjk2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="j1, j2, jf, h1, h2, hf, m1, m2, mf, s1, s2, sf" type="Integer" array="False" size=""/>
+            <input variable="j1"/>
+            <input variable="h1"/>
+            <input variable="m1"/>
+            <input variable="s1"/>
+            <assign variable="s1" expression="(j1 * 86400 ) + (h1 * 3600) + (m1 * 60) + s1"/>
+            <input variable="j2"/>
+            <input variable="h2"/>
+            <input variable="m2"/>
+            <input variable="s2"/>
+            <assign variable="s2" expression="(j2 * 86400 ) + (h2 * 3600) + (m2 * 60) + s2"/>
+            <if expression="s1 &gt; s2">
+                <then>
+                    <assign variable="sf" expression="s1 - s2"/>
+                </then>
+                <else>
+                    <assign variable="sf" expression="s2 - s1"/>
+                </else>
+            </if>
+            <assign variable="mf" expression="sf / 60"/>
+            <assign variable="sf" expression="sf mod 60"/>
+            <assign variable="hf" expression="mf / 60"/>
+            <assign variable="mf" expression="mf mod 60"/>
+            <assign variable="jf" expression="hf / 24"/>
+            <assign variable="hf" expression="hf mod 24"/>
+            <output expression="jf &amp; &quot; jour.s &quot; &amp; hf &amp; &quot; heure.s &quot; &amp; mf &amp; &quot; minute.s &quot; &amp; sf &amp; &quot; seconde.s&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

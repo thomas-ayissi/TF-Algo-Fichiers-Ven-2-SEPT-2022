@@ -1,0 +1,61 @@
+
+// convention d'ecriture:
+lowerCamelCase : variables
+UpperCamelCase : Classes, prop, Methodes
+lower_snake_case : variables
+UPPER_SNAKE_CASE : Constante
+
+
+// exemple d'algo pseudo-code
+Algorithme MonAlgo
+Variable nomVariable : Tableau de Entier[5]
+Constante NOM_CONSTANTE = valeurConstante
+DEBUT
+
+    // affecation par l'utilisateur
+    Lire(nomVariable[0])
+
+    // if
+    SI nomVariable[0] < 0 ALORS
+        instruction 1
+        instruction 1
+
+        // else if
+        SINONSI condition ALORS
+            instruction 1
+            instruction 2
+        
+        // else
+        SINON
+            instruction 1
+            instruction 2
+        
+    FINSI
+
+    // boucle do ... while
+    FAIRE
+        instructions
+    TANTQUE condition FINTQ
+    
+    // boucle for-i
+    POUR nomVariable DE valeurDepart À valeurFinComprise [PAR pas] FAIRE
+        instructions
+    FINP
+
+    // boucle while
+    TANTQUE condition FAIRE
+        instructions
+    FINTQ
+    
+
+    // affiche la valeur
+    Ecrire(nomVariable)
+    
+    
+FIN
+
+FONCTION nomFonction() : Entier
+DEBUT
+    instructions
+    RENVOIE variable
+FIN

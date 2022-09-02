@@ -1,0 +1,13 @@
+FONCTION Carre(valeur: Entier) : Entier
+DEBUT
+    RENVOIE valeur * valeur;
+FIN
+
+Algorithme UseCarre
+    Variable entier : Entier
+DEBUT
+
+    Lire( entier )
+    Ecrire( Carre(entier) )
+    
+FIN

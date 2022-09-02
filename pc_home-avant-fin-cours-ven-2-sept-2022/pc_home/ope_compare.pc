@@ -1,0 +1,53 @@
+Algorithme Comparaison
+
+Variable pointPol, pointMarie : Entier
+Variable test : Booleen // true || false
+
+DEBUT
+
+    pointPol <- 12
+    pointMarie <- 15
+    
+    // avec tout
+    // rslt egaux
+    test <- pointPol == pointMarie
+    // false
+
+    // rslt différent
+    test <- pointPol != pointMarie
+    // true
+    
+    // Seulement avec des nombre
+    // rslt pol supérieur ou égal à marie
+    test <- pointPol >= pointMarie
+    // false
+
+    // rslt pol supérieur à marie
+    test <- pointPol > pointMarie
+    // false
+
+    // rslt pol inférieur ou égal à marie
+    test <- pointPol <= pointMarie
+    // true
+
+    // rslt pol inférieur à marie
+    test <- pointPol < pointMarie
+    // true
+
+
+
+
+    // == s'oppose à !=  (quand l'un est true, l'autre est d'office false (pour les meme termes))
+    // <  s'oppose à >=
+    // >  s'oppose à <=
+
+FIN
+
+Algorithme Comparaison2
+Variable temperature : Entier
+Variable bonneTemperateur : Booleen
+DEBUT
+    
+    bonneTemperateur <- temperature >= 15 ET temperature <= 25
+
+FIN

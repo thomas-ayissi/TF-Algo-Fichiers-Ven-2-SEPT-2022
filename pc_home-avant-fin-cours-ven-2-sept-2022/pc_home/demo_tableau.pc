@@ -1,0 +1,37 @@
+Algorithme DemoTableaux
+
+    Variable noms : Tableau[12] de Chaine
+
+DEBUT
+    
+    noms[0] <- "Michel"
+    noms[11] <- noms[0]
+
+    // attention à la sortie de tableau
+    // noms[12] ou noms[-1]
+
+FIN
+
+
+Algorithme Moyenne
+    Variable notes : Tableau[5] de Entier
+    Variable cpt : Entier
+    Variable moyenne : Reel
+DEBUT
+
+
+    cpt <- 0
+    moyenne <- 0
+
+    TANTQUE cpt < 5 FAIRE
+        
+        Lire( notes[cpt] )
+        moyenne <- moyenne + notes[cpt]
+        cpt <- cpt + 1
+
+    FINTQ
+
+    Ecrire( moyenne / 5 )
+    
+
+FIN

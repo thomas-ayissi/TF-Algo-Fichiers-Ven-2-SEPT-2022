@@ -1,0 +1,79 @@
+PROCEDURE Fusion( 
+    tab1: Tableau de Entier, 
+    taille1: Entier, 
+    tab2: Tableau de Entier,
+    taille2: Entier,
+    tabFinal: Tableau de Entier
+)
+
+    Constante TAILLE = taille1 + taille 2
+    Variable i, j, k: Entier
+    Variable aInserer: Entier
+    Variable placé: Booleen
+
+DEBUT
+
+    POUR i DE 0 À TAILLE - 1 FAIRE
+        
+        // Sans tri
+        aInserer <- i < taille1 ? tab1[ i ] : tab2[ i - taille1 ]
+        tabFinal[i] <- aInserer
+
+        // Avec tri
+        // placé <- false
+        // POUR j DE 0 À i FAIRE
+            
+        //     SI !placé && j == i ALORS
+
+        //         tabFinal[ TAILLE - 1 - j ] <- aInserer;
+        //         placé <- true
+
+        //     SINON SI !placé && aInserer > tabFinal[ TAILLE - 1 - j ]
+
+        //         POUR k DE taille - 1 - i À taille - 2 - j FAIRE
+
+        //             tabFinal[k] <- tabFinal[k+1]
+
+        //         FINP 
+        //         tabFinal[TAILLE - 1 - j] <- aInserer;
+        //         placé <- true
+
+        //     FINSI
+
+        // FINP
+
+    FINP
+    
+FIN
+
+PROCEDURE Remplir(tab: Tableau, taille: Entier)
+    Variable i : Entier
+DEBUT
+    
+    POUR i DE 0 À taille FAIRE
+        Lire(tab[i])
+    FINP
+    
+
+FIN
+
+Algorithme FusionAlgo
+
+    Variable tab1: Tableau[4] de Entier,
+    Variable tab2: Tableau[6] de Entier,
+    Variable tabFinal: Tableau[10] de Entier,
+    Variable i: Entier
+
+DEBUT
+    
+    Remplir(tab1, 4)
+    Remplir(tab2, 6)
+
+    Fusion(tab1, 4, tab2, 6, tabFinal)
+
+    POUR i DE 0 À 9 FAIRE
+        Ecrire(tabFinal[i])
+    FINP
+    
+
+FIN

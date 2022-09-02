@@ -1,0 +1,71 @@
+
+
+
+Algorithme PuissanceV1
+
+    Variable base, compteur, rslt : Entier
+
+DEBUT
+    
+    Lire(base)
+
+    rslt <- 1
+    compteur <- 0
+
+    TANTQUE compteur < 10 FAIRE
+        rslt <- rslt * base
+        compteur <- compteur + 1
+    FINTQ
+
+    Ecrire(rslt)
+    
+
+FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Algorithme PuissanceV2
+
+    Variable base, compteur, puissance, rslt : Entier
+
+DEBUT
+    
+    Lire(base)
+    Lire(puissance)
+
+    rslt <- 1
+    compteur <- 0
+
+    TANTQUE compteur != puissance FAIRE
+        rslt <- rslt * base
+
+        SI puissance < 0 ALORS
+            compteur <- compteur - 1
+        SINON 
+            compteur <- compteur + 1
+        FINSI
+        
+
+    FINTQ
+
+    SI puissance < 0 ALORS
+        rslt <- 1 / rslt
+    FINSI
+
+    Ecrire(rslt)
+
+FIN

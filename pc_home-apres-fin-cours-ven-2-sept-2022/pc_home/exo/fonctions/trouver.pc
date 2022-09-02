@@ -1,0 +1,44 @@
+FONCTION FindIndex( tab: Tableau de Entier, taille: Entier, valeur: Entier ) : Entier
+    Variable i: Entier
+DEBUT
+    
+    POUR i DE 0 À taille - 1 FAIRE
+       
+        SI tab[i] == valeur ALORS
+            RENVOIE i;
+        FINSI
+
+    FINP
+
+    RENVOIE -1
+
+FIN
+
+PROCEDURE Remplir(tab: Tableau, taille: Entier)
+    Variable i : Entier
+DEBUT
+    
+    POUR i DE 0 À taille FAIRE
+        Lire(tab[i])
+    FINP
+    
+
+FIN
+
+
+Algorithme useFindIndex
+    Variable tab : Tableau[10] de Entier
+    Variable index: Entier
+    Variable toFind: Entier
+DEBUT
+
+    Remplir(tab, 10)
+
+    Lire(toFind)
+
+    index <- FindIndex( tab, 10, toFind )
+
+    Ecrire(index)
+
+    
+FIN

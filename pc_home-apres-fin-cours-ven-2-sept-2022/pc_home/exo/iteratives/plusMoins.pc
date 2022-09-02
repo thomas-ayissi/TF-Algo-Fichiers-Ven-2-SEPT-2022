@@ -1,0 +1,31 @@
+Algorithme PlusMoins
+
+    Variable aDeviner, tentative : Entier
+
+DEBUT
+
+    // quid de valeur négative?
+
+    FAIRE
+        Lire(aDeviner)
+    TANTQUE aDeviner < 1 || aDeviner > 100 FINTQ
+
+    FAIRE
+        
+        FAIRE
+            Lire(tentative)
+        // TANTQUE tentative < 1 OR tentative > 100 FINTQ
+        JUSQU'A tentative >= 1 AND tentative <= 100 FINTQ
+
+        SI tentative < aDeviner ALORS
+            Ecrire("C'est plus")
+        SINON SI tentative > aDeviner ALORS
+            Ecrire("C'est moins")
+        FINSI
+        
+    JUSQU'A tentative == aDeviner FINTQ
+
+    Ecrire("C'est gagné")
+    
+    
+FIN

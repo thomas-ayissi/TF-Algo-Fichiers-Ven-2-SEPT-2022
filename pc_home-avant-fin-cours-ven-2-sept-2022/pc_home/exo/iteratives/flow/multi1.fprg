@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="akimts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-25 11:38:21 "/>
+        <attribute name="created" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIxMToyNTowNiAiOzI4NjM="/>
+        <attribute name="edited" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIxMTozODoyMSAiOzI7Mjk3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="compteur" type="Integer" array="False" size=""/>
+            <assign variable="compteur" expression="1"/>
+            <while expression="compteur &lt;= 10">
+                <output expression="&quot;2 * &quot; &amp; compteur &amp; &quot; = &quot; &amp; (2*compteur)" newline="True"/>
+                <assign variable="compteur" expression="compteur + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

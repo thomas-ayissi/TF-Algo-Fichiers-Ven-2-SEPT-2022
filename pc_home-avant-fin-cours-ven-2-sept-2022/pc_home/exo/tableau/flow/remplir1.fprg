@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="akimts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-25 04:21:46 "/>
+        <attribute name="created" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIwNDoxODowMCAiOzI4NjE="/>
+        <attribute name="edited" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIwNDoyMTo0NiAiOzE7Mjk3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TAILLE, i" type="Integer" array="False" size=""/>
+            <assign variable="TAILLE" expression="6"/>
+            <declare name="tab" type="Integer" array="True" size="TAILLE"/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; TAILLE">
+                <input variable="tab[i]"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; TAILLE">
+                <output expression="tab[i]" newline="True"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

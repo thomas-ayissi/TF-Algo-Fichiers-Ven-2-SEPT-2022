@@ -1,0 +1,26 @@
+Algorithme Conversion
+
+Variable jours : Entier
+Variable heures : Entier
+Variable minutes : Entier
+Variable secondes : Entier
+
+DEBUT
+
+    Lire(secondes)
+
+    minutes <- secondes DIV 60
+    secondes <- secondes MOD 60
+    
+    heures <- minutes DIV 60
+    minutes <- minutes MOD 60
+
+    jours <- heures DIV 24
+    heures <- heures MOD 24
+
+    Ecrire("Jours : " + jours)
+    Ecrire("Heures : " + heures)
+    Ecrire("Minutes : " + minutes)
+    Ecrire("Secondes : " + secondes)
+
+FIN

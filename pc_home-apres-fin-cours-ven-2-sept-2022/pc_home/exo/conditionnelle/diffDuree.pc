@@ -1,0 +1,45 @@
+Algorithme DiffDuree
+
+    Variable j1, j2, jf, h1, h2, hf, m1, m2, mf, s1, s2, sf: Entier
+
+DEBUT
+
+    Lire(j1)
+    Lire(h1)
+    Lire(m1)
+    Lire(s1)
+
+    h1 <- h1 + (24 * j1)
+    m1 <- m1 + (60 * h1)
+    s1 <- s1 + (60 * m1) 
+    
+    Lire(j2)
+    Lire(h2)
+    Lire(m2)
+    Lire(s2)
+
+    h2 <- h2 + (24 * j2)
+    m2 <- m2 + (60 * h2)
+    s2 <- s2 + (60 * m2) 
+
+    SI s1 > s2 ALORS
+        sf <- s1 - s2
+    SINON
+        sf <- s2 - s1
+    FINSI
+
+    mf <- sf DIV 60
+    sf <- sf MOD 60
+
+    hf <- mf DIV 60
+    mf <- mf MOD 60
+
+    jf <- hf DIV 60
+    hf <- hf MOD 60
+
+    Ecrire(jf)
+    Ecrire(hf)
+    Ecrire(mf)
+    Ecrire(sf)
+    
+FIN

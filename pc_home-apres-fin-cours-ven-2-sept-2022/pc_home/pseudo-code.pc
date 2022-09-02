@@ -1,0 +1,20 @@
+Algorithme MonAlgorithme
+Variable petName : Chaine
+Variable petAge : Entier
+Variable petVaccinated : Booleen
+Constante PET_RACE = "Labrador"
+DEBUT
+    
+    // ceci est une affectation
+    // J'affecte la valeur 5 à la variable petAge
+    // ceci est la première affectation de cette variable, il s'agit d'une initialisation
+    
+    // correct
+    petAge <- 5
+    // incorrect (mauvais type)
+    // petAge <- "5"
+
+    // pour utiliser un variable, elle doit être initialisée
+    Ecrire(petAge)
+
+FIN

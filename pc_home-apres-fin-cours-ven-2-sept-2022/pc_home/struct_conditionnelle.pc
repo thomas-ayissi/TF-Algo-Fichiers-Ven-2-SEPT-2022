@@ -1,0 +1,69 @@
+Algorithme nomAlgo
+
+Variable temp : Entier
+
+DEBUT
+
+    temp <- 4
+
+    SI temp >= 5 && temp <= 8 ALORS  // test1
+        Ecrire("Je la mets au max") // [5;8]
+        // une ou plusieurs instructions
+
+    SINONSI temp > 8 && temp <= 15  // test2
+        Ecrire("J'allume la chaudière à basse intensité") // ]8;15]
+
+    SINONSI temp > 15 && temp <= 20 // test3
+        Ecrire("il fait bon") // ]15;20]
+
+    SINON
+        Ecrire("J'éteind la chaudière") // ]-inf;5[ union ]20;+inf[
+
+    FINSI 
+FIN
+
+
+
+Algorithme JourSemaine
+    Variable jour : Entier
+DEBUT
+    
+    Lire(jour)
+
+    // verification exacte de valeur entre plusieurs options
+    // Correspond au 'switch' dans la plupart des langages de programmation
+    SELONQUE jour VAUT
+        1 : 
+            Ecrire("lundi")
+            // instruction 2
+        2 : Ecrire("mardi")
+        3 : Ecrire("mercredi")
+        4 : Ecrire("jeudi")
+        5 : Ecrire("vendredi")
+        6 : Ecrire("samedi")
+        7 : Ecrire("dimanche")
+        SINON : Ecrire("Valeur invalide") // si jour n'est pas entre 1 et 7
+    FINSQ
+
+    // equivalent en structure SI ... SINON SI ... SINON
+    SI jour == 1 ALORS
+        Ecrire("lundi")
+    SINONSI jour == 2 ALORS
+        Ecrire("mardi")
+    SINONSI jour == 3 ALORS
+        Ecrire("mercredi")
+    SINONSI jour == 4 ALORS
+        Ecrire("jeudi")
+    SINONSI jour == 5 ALORS
+        Ecrire("vendredi")
+    SINONSI jour == 6 ALORS
+        Ecrire("samedi")
+    SINONSI jour == 7 ALORS
+        Ecrire("dimanche")
+    SINON
+        Ecrire("Valeur invalide") // si jour n'est pas entre 1 et 7
+    FINSI
+    
+    
+
+FIN

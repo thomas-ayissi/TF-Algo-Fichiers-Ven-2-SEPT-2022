@@ -1,0 +1,14 @@
+Algorithme Inversion
+Variable a, b : Entier
+DEBUT
+
+    a <- 5
+    b <- 7
+    
+    a <- b
+    b <- a 
+
+    Ecrire(a) // 7
+    Ecrire(b) // 5
+
+FIN

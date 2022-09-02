@@ -1,0 +1,63 @@
+Algorithme DemoLogique
+
+Variable test : Booleen
+
+DEBUT
+
+    // Le 'ET'
+    // ecritures acceptables: ET, AND, && 
+    test <- true ET true    // true
+    test <- true ET false   // false
+    test <- false ET true   // false
+    test <- false ET false  // false
+
+    // Le 'OU' inclusif
+    // ecritures acceptables: OU, OR, ||
+    test <- true OU true    // true
+    test <- true OU false   // true
+    test <- false OU true   // true
+    test <- false OU false  // false
+
+    // Le 'NON'
+    // ecritures acceptables: NON, NOT, !
+    test <- NON true        // false
+    test <- NON false       // true
+    
+FIN
+
+
+Algorithme DeMorgan
+Variable estBleu, estLigne, estBeau : Booleen
+DEBUT
+    
+    estBleu <- ?
+    estLigne <- ?
+
+    // Le sac beau si il est bleu et ligné
+    estBeau <- estBleu AND estLigne
+    // le sac est beau si il est soit bleu soit ligné mais pas les 2
+    estBeau <- (estBleu AND NOT estLigne) OR ( NOT estBleu AND estLigne )
+    
+    // Le sac est beau si il n'est pas et bleu et ligné en meme temps
+    estBeau <- NOT (estLigne AND estBleu)  // NOT (false AND false) // NOT (false) // true
+    // sac bleu et ligné - false
+    // sac bleu et a pois - true
+    // sac rouge et ligné - true
+    // sac rouge à pois - true
+
+    // Le sac est beau si il est soit non bleu soit non ligné (ou les 2)
+    estBeau <- NOT estLigne OR NOT estBleu // NOT false OR NOT false // true OR true // true
+    // sac bleu et ligné - false
+    // sac bleu et a pois - true
+    // sac rouge et ligné - true
+    // sac rouge à pois - true
+
+
+    // equivalant
+    NOT (a AND b) <=> NOT a OR NOT b
+    // equivalant
+    NOT (a OR b) <=> NOT a AND NOT b
+
+
+
+FIN

@@ -1,0 +1,55 @@
+Algorithme Fusion
+
+    Variable tab1, tab2: Tableau[2] de Entier
+    Variable tabFinal: Tableau[4] de Entier
+    Constante TAILLE = 4
+    Variable i, j, k: Entier
+    Variable aInserer: Entier
+
+    Variable placé: Booleen
+
+DEBUT
+    
+    Remplir(tab1, 2);
+    Remplir(tab2, 2);
+
+    POUR i DE 0 À TAILLE - 1 FAIRE
+        
+        aInserer <- i < 2 ? tab1[ i ] : tab2[ i - 2 ]
+        placé <- false
+        POUR j DE 0 À i FAIRE
+            
+            SI !placé && j == i ALORS
+
+                tabFinal[ TAILLE - 1 - j ] <- aInserer;
+                placé <- true
+
+            SINON SI !placé && aInserer > tabFinal[ TAILLE - 1 - j ]
+
+                POUR k DE taille - 1 - i À taille - 2 - j FAIRE
+
+                    tabFinal[k] <- tabFinal[k+1]
+
+                FINP 
+                tabFinal[TAILLE - 1 - j] <- aInserer;
+                placé <- true
+
+            FINSI
+
+        FINP
+
+    FINP
+    
+FIN
+
+
+PROCEDURE Remplir(tab: Tableau, taille: Entier)
+    Variable i : Entier
+DEBUT
+    
+    POUR i DE 0 À taille FAIRE
+        Lire(tab[i])
+    FINP
+    
+
+FIN

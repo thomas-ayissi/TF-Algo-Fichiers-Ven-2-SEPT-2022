@@ -1,0 +1,63 @@
+
+
+
+
+
+Algorithme Multi1
+
+    Variable compteur : Entier
+
+DEBUT
+
+    compteur <- 1
+    TANTQUE compteur <= 10 FAIRE
+
+        Ecrire( 2 + " * " + compteur + " = " + (2*compteur))
+        compteur <- compteur + 1
+
+    FINTQ
+    
+FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Algorithme Multi2
+
+    Variable compteur, tabActuel : Entier
+
+DEBUT
+    
+    tabActuel <- 1
+
+
+    TANTQUE tabActuel <= 9 FAIRE
+
+        // faire table de multiplication de tabActuel
+        compteur <- 1
+        TANTQUE compteur <= 10 FAIRE
+
+            Ecrire( tabActuel + " * " + compteur + " = " + (tabActuel*compteur))
+            compteur <- compteur + 1
+
+        FINTQ
+
+        tabActuel <- tabActuel + 1
+    FINTQ
+     
+
+FIN

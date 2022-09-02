@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="akimts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-25 01:47:57 "/>
+        <attribute name="created" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIxMjoxMzoxMyAiOzI4NTk="/>
+        <attribute name="edited" value="YWtpbXRzO0xBUFRPUC00VkhDOTg0SDsyMDIyLTA4LTI1OyIwMTo0Nzo1NyAiOzE7Mjk4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="aDeviner, tentative" type="Integer" array="False" size=""/>
+            <do expression="aDeviner &gt; 100 || aDeviner &lt; 1">
+                <input variable="aDeviner"/>
+            </do>
+            <do expression="tentative != aDeviner">
+                <do expression="tentative &gt; 100 || tentative &lt; 1">
+                    <input variable="tentative"/>
+                </do>
+                <if expression="tentative &lt; aDeviner">
+                    <then>
+                        <output expression="&quot;C'est plus&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="tentative &gt; aDeviner">
+                            <then>
+                                <output expression="&quot;C'est moins&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;C'est gagn&#233;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

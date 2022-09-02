@@ -1,0 +1,50 @@
+Algorithme Calculatrice
+
+    Variable t1, t2: Entier
+    Variable op: Chaine
+    Variable continue: Booleen
+
+DEBUT
+    
+
+    FAIRE
+
+        Lire(t1)
+        Lire(op)
+        Lire(t2)
+
+        SELONQUE op VAUT
+            "+" : Ecrire(t1 + t2)
+            "-" : Ecrire(t1 - t2)
+            "*" : Ecrire(t1 * t2)
+            "/" : 
+                SI t2 != 0 ALORS
+                    Ecrire(t1 / t2)
+                SINON
+                    Ecrire("Opération inpossible")
+                FINSI
+                
+            "DIV" : 
+                SI t2 != 0 ALORS
+                    Ecrire(t1 DIV t2)
+                SINON
+                    Ecrire("Opération inpossible")
+                FINSI
+
+            "MOD" : 
+                SI t2 != 0 ALORS
+                    Ecrire(t1 MOD t2)
+                SINON
+                    Ecrire("Opération inpossible")
+                FINSI
+
+            SINON : Ecrire("Opération invalide")
+        FINSQ
+
+        Lire(continue)
+
+    TANTQUE continue FINTQ
+    
+    
+
+FIN

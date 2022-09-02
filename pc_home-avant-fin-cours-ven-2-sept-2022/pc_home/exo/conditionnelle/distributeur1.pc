@@ -1,0 +1,54 @@
+Algorithme Distributeur
+
+    Variable stockEau, stockCola, stockThe, stockCafe : Entier
+
+    Variable choix : Chaine
+
+DEBUT
+
+    stockEau <- 5;
+    stockCola <- 5;
+    stockThe <- 5;
+    stockCafe <- 5;
+
+    Lire(choix)
+
+    SELONQUE choix VAUT
+        "eau" : 
+            SI stockEau > 0 ALORS
+                Ecrire("Voici votre eau")
+                stockEau <- stockEau - 1
+            SINON
+                Ecrire("Plus d'eau")
+            FINSI
+            
+        "cola" : 
+            SI stockCola > 0 ALORS
+                Ecrire("Voici votre cola")
+                stockCola <- stockCola - 1
+            SINON
+                Ecrire("Plus de cola")
+            FINSI
+
+        "the" : 
+            SI stockThe > 0 ALORS
+                Ecrire("Voici votre thé")
+                stockThe <- stockThe - 1
+            SINON
+                Ecrire("Plus de thé")
+            FINSI
+
+        "cafe" : 
+            SI stockCafe > 0 ALORS
+                Ecrire("Voici votre café")
+                stockCafe <- stockCafe - 1
+            SINON
+                Ecrire("Plus de café")
+            FINSI
+
+        SINON : 
+            Ecrire("choix invalide")
+    FINSQ
+    
+    
+FIN
